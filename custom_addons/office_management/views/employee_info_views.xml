@@ -1,0 +1,42 @@
+<odoo>
+    <record model="ir.ui.view" id="employee_info_tree_views">
+        <field name="name">employee.info.tree.views</field>
+        <field name="model">employee.info</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="mobile"/>
+                <field name="designation"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="employee_info_form_views">
+        <field name="name">employee.info.form.views</field>
+        <field name="model">employee.info</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="mobile"/>
+                            <field name="designation"/>
+                        </group>
+                        <group>
+                            <field name="address"/>
+                            <field name="email"/>
+                            <field name="image"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_employee_info">
+        <field name="name">Employee Info</field>
+        <field name="res_model">employee.info</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="office Management" id="menu_office_management"/>
+    <menuitem name="Employee info" action="action_employee_info" id="menu_employee_info" parent="menu_office_management"/>
+</odoo>

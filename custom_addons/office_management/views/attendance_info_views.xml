@@ -1,0 +1,44 @@
+
+
+<odoo>
+    <record model="ir.ui.view" id="attendance_info_tree_view">
+        <field name="name">attendance.info.tree.view</field>
+        <field name="model">attendance.info</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="employee_name"/>
+                <field name="check_in"/>
+                <field name="check_out"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="attendance_info_form_view">
+        <field name="name">attendance.info.form.view</field>
+        <field name="model">attendance.info</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_name"/>
+                            <field name="check_in"/>
+                            <field name="check_out"/>
+                        </group>
+                        <group>
+                            <field name="over_time"/>
+                            <field name="leave_request"/>
+                            <field name="absent_date"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_attendance_info">
+        <field name="name">Attendance Info</field>
+        <field name="res_model">attendance.info</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="office Management" id="menu_office_management"/>
+    <menuitem name="Attendance info" action="action_attendance_info" id="menu_attendance_info" parent="menu_office_management"/>
+</odoo>
