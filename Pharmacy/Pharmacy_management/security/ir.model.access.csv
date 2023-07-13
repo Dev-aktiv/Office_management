@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_employee_manage_user,access.employee.manage.user,model_employee_manage,base.group_user,1,1,1,1
+access_product_details_user,access.product.details.user,model_product_details,base.group_user,1,1,1,1
+access_product_types_user,access.product.types.user,model_product_types,base.group_user,1,1,1,1
+access_products_user,access.products.user,model_products,base.group_user,1,1,1,1
+access_skills_user,access.skills.user,model_skills,base.group_user,1,1,1,1
+access_product_company_user,access.product.company.user,model_products_company,base.group_user,1,1,1,1

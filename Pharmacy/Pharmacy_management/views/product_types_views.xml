@@ -1,0 +1,21 @@
+<odoo>
+    <record model="ir.ui.view" id="product_type_form_views">
+        <field name="name">product.type.form.views</field>
+        <field name="model">product.types</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="P_product_type"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_product_types_views">
+        <field name="name">Product types</field>
+        <field name="res_model">product.types</field>
+        <field name="view_mode">form</field>
+    </record>
+    <menuitem name="Product types" action="action_product_types_views" id="menu_product_types" parent="menu_pharmacy_management"/>
+</odoo>

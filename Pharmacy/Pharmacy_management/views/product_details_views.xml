@@ -1,0 +1,45 @@
+<odoo>
+    <record model="ir.ui.view" id="product_details_tree_views">
+        <field name="name">product.details.tree.views</field>
+        <field name="model">product.details</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="M_products_id"/>
+                <field name="product_price"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="product_details_form_views">
+        <field name="name">product.details.form.views</field>
+        <field name="model">product.details</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="product_image"/>
+                    <group>
+                        <group>
+                            <field name="Medicine_product_type_ids"/>
+                            <field name="M_products_id"/>
+                            <field name="M_products_company"/>
+                            <field name="product_price"/>
+                            <field name="product_power"/>
+                        </group>
+                        <group>
+                            <field name="product_description"/>
+                            <field name="product_mfg_date"/>
+                            <field name="product_exp_date"/>
+
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_product_details">
+        <field name="name">Product Details</field>
+        <field name="res_model">product.details</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="Product Details" action="action_product_details" id="menu_product_details" parent="menu_pharmacy_management"/>
+</odoo>

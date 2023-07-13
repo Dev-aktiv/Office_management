@@ -1,0 +1,39 @@
+<odoo>
+    <record model="ir.ui.view" id="task_manage_tree_views">
+        <field name="name">task.manage.tree.views</field>
+        <field name="model">task.manager</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="task_name"/>
+                <field name="task_team"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="task_manage_form_views">
+        <field name="name">task.manage.form.views</field>
+        <field name="model">task.manager</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="task_name"/>
+                            <field name="task_team"/>
+                        </group>
+                        <group>
+                            <field name="task_startDate"/>
+                            <field name="task_endDate"/>
+                            <field name="task_submissionDate"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_task_info">
+        <field name="name">Task Manage</field>
+        <field name="res_model">task.manager</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="Task manager" action="action_task_info" id="menu_task_manage" parent="menu_office_management"/>
+</odoo>

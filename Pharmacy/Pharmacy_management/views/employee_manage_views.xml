@@ -1,0 +1,46 @@
+<odoo>
+    <record model="ir.ui.view" id="employee_manage_tree_views">
+        <field name="name">employee.manage.tree.views</field>
+        <field name="model">employee.manage</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="designation_type"/>
+                <field name="mobile"/>
+                <field name="email"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="employee_manage_form_views">
+        <field name="name">employee.manage.form.views</field>
+        <field name="model">employee.manage</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="image"/>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="designation_type"/>
+                            <field name="mobile"/>
+                            <field name="gender"/>
+                        </group>
+                        <group>
+                            <field name="address"/>
+                            <field name="email"/>
+                            <field name="date_of_birthday"/>
+                            <field name="Emp_skill"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_employee_manage">
+        <field name="name">Employee Manage</field>
+        <field name="res_model">employee.manage</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="Pharmacy Management" id="menu_pharmacy_management"/>
+    <menuitem name="Employee manage" action="action_employee_manage" id="menu_employee_manage" parent="menu_pharmacy_management"/>
+</odoo>

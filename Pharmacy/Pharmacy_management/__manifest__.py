@@ -1,5 +1,5 @@
 {
-    'name': 'Office Management',
+    'name': 'Pharmacy management',
     'version': '15.0.0.1.0',
     'summary': '',
     'author': 'Aktiv-Software',
@@ -8,14 +8,17 @@
     'license': 'LGPL-3',
     'description': """
     """,
-    'category': 'Management/office_management',
+    'category': 'Management/Pharmacy management',
     'website': '',
     'depends': ['base'],
     'data': [
         "security/ir.model.access.csv",
-        "views/employee_info_views.xml",
-        "views/attendance_info_views.xml",
-        "views/task_manage_views.xml",
+        "views/employee_manage_views.xml",
+        "views/product_details_views.xml",
+        "views/product_types_views.xml",
+        "views/products_views.xml",
+        "views/skills_views.xml",
+        "views/product_company_views.xml"
     ],
     'demo': [
     ],

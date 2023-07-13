@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_employee_info_user,access.employee.info.user,model_employee_info,base.group_user,1,1,1,1
 access_attendance_info_user,access.attendance.info.user,model_attendance_info,base.group_user,1,1,1,1
+access_task_manage_user,access.task.manage.user,model_task_manager,base.group_user,1,1,1,1
